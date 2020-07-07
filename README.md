@@ -3,10 +3,10 @@
 Based on WebdriverIO + Cucumber
 
 To install all dependencies:
-npm i
+>***npm i***
 
 To run the tests:
-npm test
+>***npm test***
 
 To run the report:
-npm run report
+>***npm run report***
