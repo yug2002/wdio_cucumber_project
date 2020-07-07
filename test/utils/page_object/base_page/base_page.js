@@ -1,5 +1,4 @@
 const Header = require('./header');
-//const expectedConditions = browser.ExpectedConditions;
 
 class BasePage {
   constructor(){

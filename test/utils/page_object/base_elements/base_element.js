@@ -1,23 +1,20 @@
-//const { element, browser } = require("wdio");
-//const expectedConditions = browser.ExpectedConditions;
 
 class Element {
-  constructor(selector) {
-    // this.element = element(by.css(selector));
+  constructor(selector) {    
     this.element = $(selector);
   };
-  click() {
-    return this.element.click();
+  async click() {
+    await this.waitFor();
+    let elem = await this.element; 
+    return elem.click();
   };
   async getText() {
     await this.waitFor();
-    let text = (await this.element).getText();
-    return text;
+    let elem = await this.element;     
+    return elem.getText();
   };
   async waitFor(milliseconds = 15000) {
-    return (await this.element).waitForExist({timeout: milliseconds});
-    // let isDisplayed = expectedConditions.visibilityOf(this.element);
-    // return await browser.wait(isDisplayed, milliseconds);
+    return (await this.element).waitForExist({timeout: milliseconds});   
   }
 }
 

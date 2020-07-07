@@ -1,8 +1,7 @@
 
 class Collection {
 
-  constructor(selector) {
-    this.selector = selector;
+  constructor(selector) {    
     this.collection = $$(selector);
   };
   async getCount() {
@@ -19,16 +18,7 @@ class Collection {
       if(t === textToClick){
         return await element.click();
       }       
-    });
-
-    // let arrOfTexts = await arrayOfElementTexts1;  
-    // let dd = this.selector;
-    // //const arrayOfElementTexts = Array.from (this.collection).map(async (element) => { return await element.getText()});
-    // const indexOfElementToClick = await arrayOfElementTexts1.indexOf(textToClick);
-    // if (indexOfElementToClick === -1) {
-    //   throw new Error(`No element with [${textToClick}] text found`);
-    // }
-    //return this.collection.get(indexOfElementToClick).click();    
+    });    
   };
 }
 
